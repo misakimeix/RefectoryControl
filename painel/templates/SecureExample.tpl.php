@@ -1,12 +1,21 @@
-
 <!doctype html>
+
+<?php 
+
+#echo var_dump($_SESSION);
+@$_SESSION['user'] = $_POST['username'];
+@$_SESSION['pass'] = $_POST['password'];
+
+
+?>
+
 <html lang="en">
   <head>
 	<title>Login</title>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" href="painel/images/logo.png" />
+	<link rel="shortcut icon" href="images/logo.png"/>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style>
@@ -95,8 +104,8 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-			<img src="painel/images/ifpilogo.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-               <form method="POST" action="#">
+			<img src="images/ifpilogo.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+               <form method="POST" action="login">
                   <div class="form-group">
                      <label>Matricula</label>
                      <input type="text" class="form-control" placeholder="Matricula" name="username">
